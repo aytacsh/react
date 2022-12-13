@@ -1,0 +1,166 @@
+.header__parent {
+    /* position: sticky; */
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: grey;
+    /* background-color: #1D1D1D; */
+    box-shadow: 0 0 20px 1px #505050;
+}
+
+.header {
+    height: 70px;
+}
+
+.header__mobile {
+    display: none;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__content {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    flex: 1;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: red;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.header__logo a {
+    text-decoration: none;
+    color: red;
+}
+
+.header__search,
+.header__mobile__search {
+    flex: 1;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.header__search input,
+.header__mobile__search input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid red;
+    height: 30px;
+    /* width: 250px; */
+    /* color: #bebebe;  */
+    color: red; 
+    font-family: 'Roboto', sans-serif;
+    margin-right: 10px;
+}
+
+.header__search input:focus,
+.header__mobile__search input:focus {
+    outline: none;
+}
+
+.header__search input::placeholder,
+.header__mobile__search input::placeholder {
+    /* font-style: italic; */
+    color:red;
+}
+
+.header__search button,
+.header__mobile__search button {
+    background: none;
+    border: none;
+    color:red;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header__search button:hover,
+.header__mobile__search button:hover {
+    transform: scale(1.2);
+}
+
+.header__links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header__links button {
+    position: relative;
+    background: none;
+    border: none;
+    color: red;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.header__links button:hover {
+    transform: scale(1.1);
+}
+
+.header__links button span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    top: -10px;
+    /* color: #fff; */
+    color: RED;
+    right: -4px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.shake {
+    animation: shakeCart .4s ease-in-out forwards;
+}
+.Between{
+    display: flex;
+}
+@keyframes shakeCart {
+    25% {
+        transform: translateX(6px)
+    }
+
+    50% {
+        transform: translateX(-4px);
+    }
+
+    75% {
+        transform: translateX(2px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 777px) {
+    .header__search {
+        display: none;
+    }
+
+    .header__mobile {
+        display: block;
+    }
+
+    .header__mobile__search {
+        height: 70px;
+        display: flex;
+    }
+}
